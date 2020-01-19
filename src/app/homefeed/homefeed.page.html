@@ -1,0 +1,42 @@
+
+<div *ngIf="newsitems.length == 0" >
+  <br /><br /><br />
+  <h1>&nbsp; &nbsp; &nbsp; Loading...</h1>
+  <br /><br /><br />
+</div>
+
+<ion-content *ngIf='newsitems' >
+  <ion-list lines="none" >
+    <ion-item class='item-borderless' *ngFor="let n of newsitems">
+
+      <div padding class='flex-scroll-container' *ngIf="n.photos" >
+        <ion-list lines="none" class='flex-scroll' >
+          <ion-card padding class='medium-cover'>
+            <p><ion-icon slot="start" name='camera'></ion-icon> &nbsp; {{ n.name }} ({{ n.photos.length }})</p>
+            <p>{{ n.created_at }}</p>
+          </ion-card>
+          <ion-item class='flex-scroll-inner' *ngFor="let ph of n.photos">
+
+            <ion-card padding class='medium-photo'>
+              <img [src]="ph.small_url" />
+            </ion-card>
+
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div padding class='flex-scroll-container' *ngIf="n.item_type=='video'" >
+        <ion-list lines="none" class='flex-scroll' >
+          <ion-card padding class='medium-cover'>
+            <p><ion-icon slot="start" name='videocam'></ion-icon> &nbsp; {{ n.name }}</p>
+            <p>{{ n.created_at }}</p>
+          </ion-card>
+          <ion-card padding class='medium-video'>
+            <video src="{{ n.url }}" width="100%" controls ></video>
+          </ion-card>
+        </ion-list>
+      </div>
+
+    </ion-item>
+  </ion-list>  
+</ion-content>

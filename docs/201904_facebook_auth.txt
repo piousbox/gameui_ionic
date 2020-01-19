@@ -1,0 +1,5 @@
+
+From: https://ionicframework.com/docs/native/facebook
+
+ ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="123014244977505" --variable APP_NAME="tgm local"
+

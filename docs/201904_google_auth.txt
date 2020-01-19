@@ -1,0 +1,36 @@
+
+== Navigation ==
+
+Wiring navigation
+
+From: https://stackoverflow.com/questions/40245847how-to-go-to-another-page-with-a-button-click-with-ionic/45305605
+
+== Auth ==
+
+From: https://ionicthemes.com/tutorials/about/ionic-google-login
+
+I'm using OAuth 2.0 client IDs
+
+ ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.287149765762-g8mt60dm4ab5a11pmf068nu710aannpr --variable WEB_APPLICATION_CLIENT_ID=287149765762-g8mt60dm4ab5a11pmf068nu710aannpr.apps.googleusercontent.com
+
+ ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.287149765762-3i1re70h0f9n19959dj73qf19md9c8c6 --variable WEB_APPLICATION_CLIENT_ID=287149765762-3i1re70h0f9n19959dj73qf19md9c8c6.apps.googleusercontent.com
+
+ ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.287149765762-ifnium31igm6gfp5cvgpgmvk2ron1p97 --variable WEB_APPLICATION_CLIENT_ID=287149765762-ifnium31igm6gfp5cvgpgmvk2ron1p97.apps.googleusercontent.com
+
+ ic plugin remove cordova-plugin-googleplus
+ ionic cordova plugin add cordova-plugin-googleplus --variable REVERSED_CLIENT_ID=com.googleusercontent.apps.287149765762-o6jb2tlv93qejrpo5km8ihe2n7rrtuc7 --variable WEB_APPLICATION_CLIENT_ID=287149765762-o6jb2tlv93qejrpo5km8ihe2n7rrtuc7.apps.googleusercontent.com
+ # com.tgm_ionic
+ # edited environment
+ # edited package.json
+ # autoedited config.xml
+
+=== TokenRequestor: You have wrong OAuth2 related configurations, please check. Detailed error: INVALID_AUDIENCE ===
+
+From: https://stackoverflow.com/questions/38047998/getting-e-tokenrequestor-you-have-wrong-oauth2-related-configurations-detaile
+
+From: https://developers.google.com/android/guides/client-auth
+
+ keytool -exportcert -list -v -alias <your-key-name> -keystore <path-to-production-keystore> # release
+ keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore # debug
+
+From: https://console.firebase.google.com/u/0/project/travel-guide-mob-1495044453610/settings/general/android:com.tgm_native

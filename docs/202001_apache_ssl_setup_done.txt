@@ -1,0 +1,23 @@
+
+= Setup =
+
+Here are setup instructions:
+* download apache from https://www.apachelounge.com/download/ and install it
+* Add tgm.mac as a domain in your hosts file, on Windows XP it is this file: c:\WINDOWS\system32\drivers\etc\hosts
+ 127.0.0.1 tgm.mac
+* The ssl certificate and key are generated and available at etc/tgm.mac.crt, etc/tgm.mac.key .
+* use this as an example virtual site definition, proxying to port 8100. You can change the location of the certificate/key, and save your own virtual site definition in this repo so you don't lose it.
+ https://github.com/piousbox/tgm_ionic/blob/0.1.1/etc/httpd/sites-enabled/ssl-tgm-ionic-2.conf 
+* run the application on port 8100.
+
+== IMPORTANT NOTES ==
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/tgm.piousbox.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/tgm.piousbox.com/privkey.pem
+   Your cert will expire on 2020-01-28. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+   
+ keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64

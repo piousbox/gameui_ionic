@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ -z "${NODE_ENV}" ]]; then
+  echo "set NODE_ENV before running this script"
+  exit 3
+fi
+env="${NODE_ENV}"
+
+origin="manager.piousbox.com"
+protocol="https"
+
+set -e
+
+cat ./scripts/environment.ts-tmpl | \
+  sed -e "s/\$origin/$origin/g" | \
+  sed -e "s/\$protocol/$protocol/g" > ./src/environments/environment.ts
+
+ionic cordova build android --debug
+cp /Users/piousbox/projects/node.js/tgm_ionic/platforms/android/app/build/outputs/apk/debug/app-debug.apk ~/Downloads
+
+echo 'build tgm_ionic android ok'
+

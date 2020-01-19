@@ -1,0 +1,18 @@
+
+
+Here is the next task. Let's set up the tgm_ionic repo on your machine, and make some changes to it. The setup is relatively difficult, and I'll help you out with it.
+
+Here is the repo, and the current branch is the alphabetically-latest (currently 0.1.2): https://github.com/piousbox/tgm_ionic/tree/0.1.2
+
+To login, you need (1) https and (2) tgm.mac domain. So you need something like an apache proxy https://tgm.mac -> http://localhost:8100 . I have an entry in /etc/hosts pointing tgm.mac to 127.0.0.1 and I use this virtual site: https://github.com/piousbox/tgm_ionic/blob/0.1.2/etc/httpd/sites-enabled/ssl-tgm-ionic.conf and you have to generate your own self-signed certificate. Having a warning is okay. You should commit your virtual site definition in this folder: https://github.com/piousbox/tgm_ionic/blob/0.1.2/etc/httpd/sites-enabled/ssl-tgm-ionic.conf
+
+The application is up and running here: https://tgm.piousbox.com specifically the /homefeed page. The tasks are:
+
+* fix scrollbars. There should be only the reasonable scrollbars up-down, and each newsitem's scrollbar left-right should look good
+* each element (photo) in the newsitem should be fit-height or fit-width (whichever is larger), so that they can be viewed nicer
+* Optional: Each photo should be clickable to take the full screen. Have a button [x] to close.
+* optional: when I'm looking at each photo, swiping left/right should bring previous/next photo of the newsitem. And for desktop, having icons [<-] and [->] to go to previous & next photo, when in this "full-screen" mode.
+
+If you need assistance, don't hesitate to ask!
+
+Please make a pull request so I can review your code.

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+origin="localhost:3000"
+protocol="http"
+
+set -e
+
+cat ./scripts/environment.ts-tmpl | \
+  sed -e "s/\$origin/$origin/g" | \
+  sed -e "s/\$protocol/$protocol/g" > ./src/environments/environment.ts
+
+echo 'clean tgm_ionic ok'
+

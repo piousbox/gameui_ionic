@@ -1,0 +1,7 @@
+{
+  "name": "com.piousbox.tgm",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

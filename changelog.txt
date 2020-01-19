@@ -1,0 +1,10 @@
+0.0.0 - lets compile
+0.0.1 - the 0.0.0 wouldnt let me login, lets try a different base now.
+        20190221 lets wire some nagivation.
+        20190222 I can privately show galleries.
+0.0.2 - navigation and auth for klau
+0.0.3 - video player with controls
+0.0.4 - better onInit
+0.1.0 - 20190929 let's go
+0.1.1 - 20200105 current for fiverr, github
+0.1.2 - 20200109 let's wire homefeed, unrestricted

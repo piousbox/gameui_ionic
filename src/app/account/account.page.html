@@ -1,0 +1,13 @@
+
+<ion-content padding>
+  <ul>
+    <li><b>name:</b> {{ currentUser.name }}</li>
+    <li><b>email:</b> {{ currentUser.email }}</li>
+    <li>
+      <ion-item button (click)="navigate('/en/cities')">
+      <ion-icon slot="start" name='person'></ion-icon><ion-label>Cities</ion-label></ion-item>
+    </li>
+    <li><a href="/en/cities">All Cities</a></li>
+    <li><a href="/en/cities/travel-to/Chicago">Chicago!</a></li>
+  </ul>
+</ion-content>
